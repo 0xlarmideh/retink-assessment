@@ -28,7 +28,9 @@
 
 .auth-in-container {
   margin: 0 auto;
-  width: 450px;
+  min-width: 350px;
+  max-width: 600px;
+  padding: 0 10px;
 }
 
 main {
