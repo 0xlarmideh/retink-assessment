@@ -7,6 +7,7 @@ import ProcessGrid from "./components/Process";
 import Services from "./components/Services";
 import Header from "./components/Header";
 import CTAsection from "./components/CTAsection";
+import Footer from "./components/Footer";
 
 function App() {
   const [session, setSession] = useState(null);
@@ -31,9 +32,8 @@ function App() {
   return (
     <>
       <nav>
-        <div className="mini-container">
-
-          <img alt="retink-logo" width="80%" src="/src/assets/retink.png" />
+        <div className="mini-container nav-grid">
+          <img alt="retink-logo" src="/src/assets/retink.png" />
         </div>
       </nav>
       <main>
@@ -50,6 +50,16 @@ function App() {
           <CTAsection />
         </div>
       </main>
+      <footer>
+        <div className=" footer-cont max-container">
+          <Footer />
+        </div>
+        <div className="footer-bottom">
+          <a href="#" className="copywright">Copyright © 2021 Retink</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+      </footer>
     </>
   );
   // }
