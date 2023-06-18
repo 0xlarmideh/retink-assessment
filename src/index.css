@@ -366,6 +366,10 @@ footer {
   display: flex;
   justify-content: center;
 }
+.btn-grid {
+  flex-direction: column;
+  gap: 20px;
+}
 .link-with-shadow, .link-with-outline {
   font-size: 18px;
 }
@@ -401,6 +405,7 @@ footer {
 }
 .footer-bottom a:nth-child(1) {
   padding-right: 0px;
+}
 }
 
 @media only screen and (max-width: 450px) {

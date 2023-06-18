@@ -34,16 +34,16 @@ function App() {
   }, []);
 
   //Conditional rendering of auth or homepage
-  if (!session) {
-    return (
-      <div className="auth-container">
-        <img alt="retink-logo" src="/assets/retink.png" />
-        <div className="auth-in-container">
-          <Auth supabaseClient={supabase}  providers={["google"]} appearance={{ theme: ThemeSupa }} />
-        </div>
-      </div>
-    );
-  } else {
+  // if (!session) {
+  //   return (
+  //     <div className="auth-container">
+  //       <img alt="retink-logo" src="/assets/retink.png" />
+  //       <div className="auth-in-container">
+  //         <Auth supabaseClient={supabase}  providers={["google"]} appearance={{ theme: ThemeSupa }} />
+  //       </div>
+  //     </div>
+  //   );
+  // } else {
   return (
     <>
       <nav>
@@ -84,7 +84,7 @@ function App() {
       </footer>
     </>
   );
-  }
+  // }
 }
 
 export default App;
