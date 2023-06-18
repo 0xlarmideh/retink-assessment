@@ -12,10 +12,11 @@ import { createClient } from "@supabase/supabase-js";
 
 
 function App() {
-  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-  const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-  const supabase = createClient(supabaseUrl, supabaseAnonKey);
+  const supabase = createClient(
+    "https://ezwmfnnhbnsuvrnqlklx.supabase.co",
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV6d21mbm5oYm5zdXZybnFsa2x4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODY5OTkzMDUsImV4cCI6MjAwMjU3NTMwNX0.nf4ykZZmkCijDLvzFa4aHLF0GyZx1Ps8_XJ7It4qly4"
+  );
   // Auth UI
   const [session, setSession] = useState(null);
   useEffect(() => {
