@@ -389,7 +389,7 @@ footer {
     height: 50px;
   }
   .service-grid {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
 }
 }
 
