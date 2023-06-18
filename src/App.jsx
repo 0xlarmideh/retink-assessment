@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import CTAsection from "./components/CTAsection";
 import Footer from "./components/Footer";
 import Button from "./components/Button";
+import { createClient } from "@supabase/supabase-js";
 
 
 function App() {
