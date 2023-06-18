@@ -37,9 +37,9 @@ function App() {
   if (!session) {
     return (
       <div className="auth-container">
-        <img alt="retink-logo" src="/src/assets/retink.png" />
+        <img alt="retink-logo" src="/assets/retink.png" />
         <div className="auth-in-container">
-          <Auth supabaseClient={supabase} providers={["google"]} appearance={{ theme: ThemeSupa }} />
+          <Auth supabaseClient={supabase}  providers={["google"]} appearance={{ theme: ThemeSupa }} />
         </div>
       </div>
     );
@@ -48,7 +48,7 @@ function App() {
     <>
       <nav>
         <div className="mini-container nav-grid">
-          <img alt="retink-logo" src="/src/assets/retink.png" />
+          <img alt="retink-logo" src="/assets/retink.png" />
           <Button
             className={"btn-purple btn"}
             title={"Sign out"}

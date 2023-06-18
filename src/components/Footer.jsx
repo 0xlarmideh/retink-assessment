@@ -5,29 +5,29 @@ const Footer = () => {
     <>
       <div className="footer-top-grid">
         <div>
-          <img src="/src/assets/retink.png" alt="retink-logo" />
+          <img src="/assets/retink.png" alt="retink-logo" />
         </div>
         <div>
           <p>Connect with us</p>
           <div className="social-link">
             <a href="#">
-              <img src="/src/assets/footer/fb.png" alt="facebook-link" />
+              <img src="/assets/footer/fb.png" alt="facebook-link" />
             </a>
             <a href="#">
-              <img src="/src/assets/footer/twitter.png" alt="twitter-link" />
+              <img src="/assets/footer/twitter.png" alt="twitter-link" />
             </a>
             <a href="#">
-              <img src="/src/assets/footer/ig.png" alt="instagram-link" />
+              <img src="/assets/footer/ig.png" alt="instagram-link" />
             </a>
             <a href="#">
-              <img src="/src/assets/footer/linkedin.png" alt="linkedin-link" />
+              <img src="/assets/footer/linkedin.png" alt="linkedin-link" />
             </a>
             <a href="#">
-              <img src="/src/assets/footer/ytube.png" alt="youtube-link" />
+              <img src="/assets/footer/ytube.png" alt="youtube-link" />
             </a>
             <a href="#">
               <img
-                src="/src/assets/footer/pinterest.png"
+                src="/assets/footer/pinterest.png"
                 alt="pinterest-link"
               />
             </a>

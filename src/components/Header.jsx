@@ -17,7 +17,7 @@ const Header = () => {
           </p>
         </div>
         <div className="header-img-container">
-          <img src="src/assets/avatar.svg" />
+          <img src="/assets/avatar.svg" />
         </div>
       </header>
       <div className="btn-grid">
