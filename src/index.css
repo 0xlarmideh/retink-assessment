@@ -376,9 +376,6 @@ footer {
     height: 20px;
   }
   .footer-bottom {
-  background: black;
-  display: flex;
-  justify-content: space-between;
   padding: 40px 40px;
 }
 
@@ -393,6 +390,17 @@ footer {
   padding: 0 10px;
   margin: 0 10px
 }
+
+.footer-bottom-grid {
+  display: block;
+}
+.footer-bottom {
+  justify-content: space-between;
+  padding: 40px 40px;
+  font-size: 14px;
+}
+.footer-bottom a:nth-child(1) {
+  padding-right: 0px;
 }
 
 @media only screen and (max-width: 450px) {
