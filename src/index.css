@@ -344,7 +344,7 @@ footer {
 
 @media only screen and (max-width: 1200px) {
   .process-item {
-    flex: calc(50% - 120px);
+    flex: 0 calc(50% - 120px);
   }
   .process-item-title {
     height: 40px;

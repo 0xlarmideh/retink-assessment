@@ -11,11 +11,13 @@ import Button from "./components/Button";
 import { createClient } from "@supabase/supabase-js";
 
 
+
 function App() {
+  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+  const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
   const supabase = createClient(
-    "https://ezwmfnnhbnsuvrnqlklx.supabase.co",
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV6d21mbm5oYm5zdXZybnFsa2x4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODY5OTkzMDUsImV4cCI6MjAwMjU3NTMwNX0.nf4ykZZmkCijDLvzFa4aHLF0GyZx1Ps8_XJ7It4qly4"
+    supabaseUrl, supabaseKey
   );
   // Auth UI
   const [session, setSession] = useState(null);
@@ -34,16 +36,16 @@ function App() {
   }, []);
 
   //Conditional rendering of auth or homepage
-  // if (!session) {
-  //   return (
-  //     <div className="auth-container">
-  //       <img alt="retink-logo" src="/assets/retink.png" />
-  //       <div className="auth-in-container">
-  //         <Auth supabaseClient={supabase}  providers={["google"]} appearance={{ theme: ThemeSupa }} />
-  //       </div>
-  //     </div>
-  //   );
-  // } else {
+  if (!session) {
+    return (
+      <div className="auth-container">
+        <img alt="retink-logo" src="/assets/retink.png" />
+        <div className="auth-in-container">
+          <Auth supabaseClient={supabase}  providers={["google"]} appearance={{ theme: ThemeSupa }} />
+        </div>
+      </div>
+    );
+  } else {
   return (
     <>
       <nav>
@@ -84,7 +86,7 @@ function App() {
       </footer>
     </>
   );
-  // }
+  }
 }
 
 export default App;
