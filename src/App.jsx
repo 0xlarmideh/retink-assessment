@@ -8,10 +8,11 @@ import Services from "./components/Services";
 import Header from "./components/Header";
 import CTAsection from "./components/CTAsection";
 import Footer from "./components/Footer";
+import Button from "./components/Button";
+
 
 function App() {
   const [session, setSession] = useState(null);
-
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
@@ -26,14 +27,26 @@ function App() {
     return () => subscription.unsubscribe();
   }, []);
 
-  // if (!session) {
-  //   return <Auth supabaseClient={supabase} appearance={{ theme: ThemeSupa }} />;
-  // } else {
+  if (!session) {
+    return (
+      <div className="auth-container">
+        <img alt="retink-logo" src="/src/assets/retink.png" />
+        <div className="auth-in-container">
+          <Auth supabaseClient={supabase} providers={["google"]} appearance={{ theme: ThemeSupa }} />
+        </div>
+      </div>
+    );
+  } else {
   return (
     <>
       <nav>
         <div className="mini-container nav-grid">
           <img alt="retink-logo" src="/src/assets/retink.png" />
+          <Button
+            className={"btn-purple btn"}
+            title={"Sign out"}
+            onClick={() => supabase.auth.signOut()}
+          />
         </div>
       </nav>
       <main>
@@ -55,14 +68,16 @@ function App() {
           <Footer />
         </div>
         <div className="footer-bottom">
-          <a href="#" className="copywright">Copyright © 2021 Retink</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+          <a href="#" className="copywright">
+            Copyright © 2021 Retink
+          </a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
         </div>
       </footer>
     </>
   );
-  // }
+  }
 }
 
 export default App;
