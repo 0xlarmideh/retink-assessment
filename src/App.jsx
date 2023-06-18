@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { Auth } from "@supabase/auth-ui-react";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
-import { supabase } from "./supabaseclient";
 import ProcessGrid from "./components/Process";
 import Services from "./components/Services";
 import Header from "./components/Header";
@@ -12,6 +11,10 @@ import Button from "./components/Button";
 
 
 function App() {
+  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+  const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+  const supabase = createClient(supabaseUrl, supabaseAnonKey);
   // Auth UI
   const [session, setSession] = useState(null);
   useEffect(() => {
