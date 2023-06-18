@@ -34,6 +34,7 @@ const Services = () => {
                   width="100%"
                   height="100%"
                   src={imageUrl}
+                  alt={title}
                 />
               </div>
               <p className="service-item-title">{title}</p>
