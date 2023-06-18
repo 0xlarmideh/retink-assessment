@@ -12,6 +12,7 @@ import Button from "./components/Button";
 
 
 function App() {
+  // Auth UI
   const [session, setSession] = useState(null);
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -27,6 +28,7 @@ function App() {
     return () => subscription.unsubscribe();
   }, []);
 
+  //Conditional rendering of auth or homepage
   if (!session) {
     return (
       <div className="auth-container">
